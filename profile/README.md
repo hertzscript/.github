@@ -1,0 +1,5 @@
+We aim to provide next-generation JavaScript programming systems which have never been seen before. Our flagship project is System G2. The G2 project is a JavaScript virtual machine, compiler, and M:N threading system which allows programs to execute concurrently and/or in parallel. The main motivation of G2 is to generate a standard multi-CPU parallel computing system and library for JavaScript.
+
+Tasklet is described in the second generation (G2) specification, and will replace VirtualMachine from the first generation (G1) to implement Voluntary Preemptive Multitasking (VPM) threads in JavaScript.
+
+The new distributed scheduling system for Tasklets is Tasklet Burst Coscheduling (TBC), an implementation a variant of Concurrent Gang Scheduling called Paired Gang Scheduling. The TBC scheduling algorithm deviates from a traditional task-oriented runqueue design and is unaware of threads, instead representing the multitasking system as a sequence of events in a decentralized Discrete-Event Simulation. The scheduler re-sequences Tasklet events in short “bursts”, a fixed-increment time-progression
